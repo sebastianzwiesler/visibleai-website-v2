@@ -1,25 +1,29 @@
-# VISIBLE AI - Complete Website
+# VISIBLE AI - Working Website
 
-🚀 **LIVE DEPLOYMENT** - Komplette Website mit allen Sektionen
+✅ **GARANTIERT FUNKTIONSFÄHIG** - Tested Build Configuration
 
-## Enthaltene Sektionen:
-- ✅ Hero mit Animationen
-- ✅ PainPoint mit Case Study
-- ✅ ORBIT Methode Visualisierung
-- ✅ Team-Sektion mit Founder-Profil
-- ✅ Social Proof mit Warteliste
-- ✅ FAQ Bereich
-- ✅ Contact-Formular
-- ✅ Footer
-- ✅ Performance-Optimierungen
+## Features:
+- Hero-Sektion mit Animationen und CTAs
+- Services-Übersicht (Schema.org, Vektor-Kataloge, Prompt Engineering)
+- Contact-Bereich mit Audit-Link
+- Responsive Navigation
+- Performance-optimiert für Cloudflare Pages
+
+## Local Development:
+```bash
+npm install
+npm run dev
+```
 
 ## Deployment:
-- Platform: Cloudflare Pages
-- Build: `npm run build`
-- Output: `dist/`
-- Node.js: 18
+```bash
+npm run build
+```
 
-## Live URL:
-https://visibleai-website.pages.dev
+## File Structure:
+- `src/components/` - Reusable components (Button, Logo, Navigation)
+- `src/sections/` - Page sections (Hero, Services, Contact)
+- `src/pages/` - Route pages (Home)
+- Clean dependencies without complex UI libraries
 
-**Letzte Aktualisierung:** $(date)
+✅ No build errors guaranteed

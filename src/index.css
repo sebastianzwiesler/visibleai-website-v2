@@ -7,13 +7,6 @@
   --foreground: hsl(20, 14.3%, 4.1%);
   --primary: hsl(207, 90%, 54%);
   --primary-foreground: hsl(211, 100%, 99%);
-  --ring: hsl(20, 14.3%, 4.1%);
-  --radius: 0.5rem;
-}
-
-.dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
 }
 
 body {

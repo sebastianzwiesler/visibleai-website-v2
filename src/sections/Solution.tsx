@@ -1,88 +1,43 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useScrollReveal } from '@/hooks/use-scroll-reveal';
-import { Clock, Users, TrendingUp } from 'lucide-react';
+import { Database, BrainCircuit, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export function Solution() {
-  const revealRef = useScrollReveal();
-
   return (
-    <section id="solution" className="py-20 px-6 lg:px-8 bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto">
-        <div ref={revealRef} className="scroll-reveal text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-light mb-6 font-display">
-            Die Lösung?<br/>
-            <span className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Unser AI-Visibility Accelerator</span>
+    <section id="solution" className="py-20 bg-slate-50">
+      <div className="container mx-auto px-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">
+            ORBIT-Methode
           </h2>
-          
-          
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <Card className="bg-blue-50 dark:bg-blue-900/20 border-0 rounded-2xl">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-7 h-7 text-blue-600" />
-                </div>
-                <h4 className="text-lg font-semibold mb-2">Phase 1: Audit</h4>
-                <p className="text-sm text-apple-gray dark:text-gray-400">Analyse der aktuellen KI-Sichtbarkeit</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-green-50 dark:bg-green-900/20 border-0 rounded-2xl">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-7 h-7 text-green-600" />
-                </div>
-                <h4 className="text-lg font-semibold mb-2">Phase 2: Build</h4>
-                <p className="text-sm text-apple-gray dark:text-gray-400">Implementierung der ORBIT-Strategie</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-purple-50 dark:bg-purple-900/20 border-0 rounded-2xl">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-7 h-7 text-purple-600" />
-                </div>
-                <h4 className="text-lg font-semibold mb-2">Phase 3: Optimize</h4>
-                <p className="text-sm text-apple-gray dark:text-gray-400">Kontinuierliche Verbesserung & Monitoring</p>
-              </CardContent>
-            </Card>
-          </div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            Unsere wissenschaftlich entwickelte 5-Schicht-Methode macht Ihre Produkte in allen KI-Systemen sichtbar.
+          </p>
 
-          {/* Blue Text on White Background */}
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <p className="dark:text-blue-400 text-[36px] font-bold pl-[100px] pr-[100px] bg-[#00000000] text-[#000000]">
-              In drei Phasen von der Analyse bis zur kontinuierlichen Optimierung – komplett Done-for-You.
-            </p>
-          </div>
-
-          {/* White Space */}
-          <div className="py-16"></div>
-
-          <div className="text-center mb-12">
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-4 font-bold">
-              Das 5-Layer-Modell hinter dem Erfolg
-            </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <Database className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+              <h3 className="text-xl font-semibold mb-4">Schema.org Optimierung</h3>
+              <p className="text-gray-600">Strukturierte Daten für maximale KI-Sichtbarkeit und besseres Ranking in AI-Suchergebnissen.</p>
+            </div>
             
-            <div className="flex items-end justify-center space-x-3 mb-8">
-              <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-display">
-                ORBIT
-              </h2>
-              <div className="flex items-center space-x-1 text-sm mb-2">
-                <span className="text-gray-500 dark:text-gray-400 font-light">by</span>
-                <div className="flex items-center space-x-1">
-                  <span className="text-gray-700 dark:text-gray-300 font-medium">VISIBLE</span>
-                  <div className="w-4 h-4 bg-apple-blue rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">AI</span>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <BrainCircuit className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+              <h3 className="text-xl font-semibold mb-4">Vektor-Kataloge</h3>
+              <p className="text-gray-600">Ihre Produkte werden in KI-Datenbanken indexiert und in jeder relevanten AI-Antwort präsent.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <Zap className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+              <h3 className="text-xl font-semibold mb-4">Prompt Engineering</h3>
+              <p className="text-gray-600">Optimiert für ChatGPT, Claude, Gemini und alle kommenden KI-Systeme.</p>
             </div>
           </div>
-          
-
-          
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );

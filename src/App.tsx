@@ -1,35 +1,16 @@
-import { Switch, Route } from "wouter";
-import { QueryClientProvider } from "";
-import { queryClient } from "./lib/queryClient";
-import { useEffect } from "react";
-import { initGA } from "./lib/analytics";
-import { useAnalytics } from "./hooks/use-analytics";
+import { Route, Switch } from "wouter";
 import Home from "./pages/Home";
-import NotFound from "./pages/not-found";
 
-function Router() {
-  useAnalytics();
-  
+function App() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route component={NotFound} />
+      <Route>
+        <div className="min-h-screen flex items-center justify-center">
+          <h1 className="text-2xl font-bold">404 - Seite nicht gefunden</h1>
+        </div>
+      </Route>
     </Switch>
-  );
-}
-
-function App() {
-  useEffect(() => {
-    if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
-      console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
-    }
-    initGA();
-  }, []);
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Router />
-    </QueryClientProvider>
   );
 }
 
